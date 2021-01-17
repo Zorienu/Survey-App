@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+
+body {
+	background-color: #eee;
+	font-family: 'Raleway', sans-serif;
+}
+
+.app {
+	width: 80%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+
