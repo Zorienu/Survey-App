@@ -4,12 +4,20 @@
   "description": "create surveys and show them to clients",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve",
+    "start-dev": "webpack-dev-server"
   },
   "author": "Jasyd David Caballero Quintero",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "nodemon": "^2.0.7",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
