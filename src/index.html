@@ -38,50 +38,83 @@
 
 		<!-- añadir formulario de creacion de entrevista -->
 		<form id="create-survey-form" class="create-survey-form">
-			<div class="survey-title-container">
-				<input id="survey-title" class="survey-title" type="text" placeholder="Survey Title">
-				<select id="public-survey" class="survey-select">
-					<option value="true">Public</option>
-					<option value="false">Private</option>
-				</select>
-			</div>
-
-			<div class="survey-question">
-				<div class="question">
-					<input id="question-text" class="question-text" type="text" placeholder="Untitled question">
-					<select id="question-type" class="question-type-select">
-						<option value="radio">Multiple choice</option>
-						<option value="text" selected>Text</option>
+			<div id="questions-container">
+				<div class="survey-title-container">
+					<input class="create-survey-title" type="text" placeholder="Survey Title">
+					<select id="public-survey" class="survey-select">
+						<option value="true">Public</option>
+						<option value="false">Private</option>
 					</select>
 				</div>
 
-				<div class="answers-container">
-					<div>
-						<input class="question-answer" type="text" placeholder="Answer text" disabled>
+				<div class="survey-question">
+					<div class="question">
+						<input id="question-text" class="question-text" type="text" placeholder="Untitled question">
+						<select class="question-type question-type-select">
+							<option value="radio">Multiple choice</option>
+							<option value="text" selected>Text</option>
+						</select>
 					</div>
-				</div>
 
-				<template id="multiple-choice-template">
-					<div class="answers">
+					<div class="answers-container">
 						<div>
-							<input type="radio" disabled>
-							<input class="question-answer" type="text" placeholder="Option">
-							<a id="del-answer" class="del-answer"><i class="fas fa-eraser"></i></a>
+							<input class="question-answer" type="text" placeholder="Answer text" disabled>
 						</div>
 					</div>
 
-					<div class="add-answer-container">
-						<input type="radio" disabled>
-						<a class="add-option">Add option</a>
+					<div class="div-delete-question">
+						<a class="delete-question"><i class="far fa-trash-alt"></i></a>
 					</div>
-				</template>
-
-				<template id="text-template">
-					<div>
-						<input class="question-answer" type="text" placeholder="Answer text" disabled>
-					</div>
-				</template>
+				</div>
 			</div>
+
+			<div class="survey-buttons">
+				<a id="add-question-btn">Add Question</a>
+				<a id="send-survey">Send survey</a>
+				<a id="cancel-survey">Cancel</a>
+			</div>
+
+			<template id="survey-question-template">
+				<div class="survey-question">
+					<div class="question">
+						<input id="question-text" class="question-text" type="text" placeholder="Untitled question">
+						<select class="question-type question-type-select">
+							<option value="radio">Multiple choice</option>
+							<option value="text" selected>Text</option>
+						</select>
+					</div>
+
+					<div class="answers-container">
+						<div>
+							<input class="question-answer" type="text" placeholder="Answer text" disabled>
+						</div>
+					</div>
+					<div class="div-delete-question">
+						<a class="delete-question"><i class="far fa-trash-alt"></i></a>
+					</div>
+				</div>
+			</template>
+
+			<template id="multiple-choice-template">
+				<div class="answers">
+					<div>
+						<input type="radio" disabled>
+						<input class="question-answer" type="text" placeholder="Option">
+						<a id="del-answer" class="del-answer"><i class="fas fa-eraser"></i></a>
+					</div>
+				</div>
+
+				<div class="add-answer-container">
+					<input type="radio" disabled>
+					<a class="add-option">Add option</a>
+				</div>
+			</template>
+
+			<template id="text-template">
+				<div>
+					<input class="question-answer" type="text" placeholder="Answer text" disabled>
+				</div>
+			</template>
 		</form>
 	</template>
 

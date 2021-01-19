@@ -1,7 +1,10 @@
 .create-survey-form {
 	width: 80%;
 	margin: auto;
+	display: flex;
+	flex-direction: column;
 }
+
 .survey-title-container {
 	background-color: #fff;
 	padding: 20px 30px;
@@ -12,7 +15,7 @@
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 }
 
-.survey-title {
+.create-survey-title {
 	flex: 1;
 	margin: 0;
 	margin-right: 15px;
@@ -20,9 +23,10 @@
 	outline: none;
 	border-bottom: 2px solid #aaa;
 	line-height: 135%;
+	font-size: 30px;
 }
 
-.survey-title:focus, .survey-title:hover {
+.create-survey-title:focus, .create-survey-title:hover {
 	border-bottom: 2px solid #9157cc;
 }
 
@@ -32,6 +36,7 @@
 	background-color: #fff;
 	border: 1px solid #aaa;
 	font-size: 14px;
+	padding: 10px 4px;
 }
 
 /*question card*/
@@ -41,6 +46,9 @@
 	border-radius: 8px;
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	border-left: 3px solid #9157cc; 
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
 }
 
 .survey-question .question, .answers div, .add-answer-container {
@@ -84,6 +92,7 @@
 
 .add-option {
 	color: #aaa;
+	cursor: pointer;
 }
 
 .add-question-answer {
@@ -101,5 +110,45 @@
 
 .del-answer:hover {
 	color: #333;
+	cursor: pointer;
+}
+
+.div-delete-question {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.div-delete-question a {
+	color: #777;
+	margin-right: 5px;
+	font-size: 20px;
+	flex: 0;
+	display: flex;
+	height: 30px;
+	width: 30px;
+	padding: 8px;
+	align-items: center;
+	justify-content: center;
+}
+
+.div-delete-question a:hover {
+	background-color: #eee;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.survey-buttons {
+	align-self: flex-end;
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.survey-buttons a {
+	padding: 10px 30px;
+	background-color: #9157cc;
+	border-radius: 8px;
+	color: #fff;
+	font-weight: 700;
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	cursor: pointer;
 }
