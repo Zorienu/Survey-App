@@ -29,7 +29,7 @@ const addEventHandlers = (survey) => {
 
   const delBtn = document.getElementById(`del-${survey._id}`);
   delBtn.addEventListener("click", () => {
-    //Surveys.delete()
+    Surveys.del(survey._id);
     document.getElementById(`s-${survey._id}`).remove();
   });
 };

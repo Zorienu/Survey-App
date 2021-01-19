@@ -3,7 +3,6 @@ import stringToHTML from "./stringToHTML";
 
 const addEventDeleteOptionBtn = (question) => {
   const deleteBtns = question.querySelectorAll(".del-answer");
-  console.log(deleteBtns.length);
 
   // just one option => hide delete button
   if (deleteBtns.length === 1) return (deleteBtns[0].style.display = "none");

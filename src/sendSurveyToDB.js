@@ -4,7 +4,7 @@ const sendSurveyToDB = () => {
   let survey = {
     title: "",
     public: true,
-    user_mail: "temp@mail.com",
+    user_email: "temp@mail.com",
     code: Math.floor(Math.random() * 1000),
     questions: [],
   };
@@ -37,6 +37,8 @@ const sendSurveyToDB = () => {
     survey.questions.push(question);
   });
   console.log(survey);
+  const Survey = crudder("api/surveys");
+  Survey.create(survey).then(console.log);
 };
 
 export default sendSurveyToDB;

@@ -7,9 +7,7 @@ const renderSurveyControlPanel = () => {
   appContainer.innerHTML = surveysControlPanelTemplate.innerHTML;
 
   renderSurveys();
-  console.log("aqui");
   const addSurveyBtn = document.getElementById("add-survey-btn");
-  console.log(addSurveyBtn);
   addSurveyBtn.addEventListener("click", renderCreateSurvey);
 };
 

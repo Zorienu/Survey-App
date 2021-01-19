@@ -29,15 +29,14 @@ const crudder = (resource) => {
   const getById = (id) => fetch(`${url}/${id}`).then((res) => res.json());
 
   const del = (x, token = null) => {
-    fetch(url, {
+    fetch(`${url}/${x}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
         authorization: token,
       },
-    })
-      .then((res) => res.json())
-      .then(console.log);
+    }).then(() => console.log("the survey has been deleted"));
+    //.then(console.log);
   };
 
   return { create, update, get, getById, del };
