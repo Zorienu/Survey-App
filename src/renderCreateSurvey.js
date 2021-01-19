@@ -1,6 +1,7 @@
 import renderQuestionType from "./renderQuestionType";
 import renderSurveyControlPanel from "./renderSurveyControlPanel";
 import sendSurveyToDB from "./sendSurveyToDB";
+import stringToHTML from "./stringToHTML";
 
 // add events to each question
 const renderQuestions = () => {
@@ -26,7 +27,9 @@ const addEventsSurveyBtns = () => {
   addQuestionBtn.addEventListener("click", () => {
     const questionsContainer = document.getElementById("questions-container");
     const questionTemplate = document.getElementById("survey-question-template");
-    questionsContainer.innerHTML += questionTemplate.innerHTML;
+    // innerHTML is string, convert to element preventing rebuild the entire DOM
+    const newQuestionNode = stringToHTML(questionTemplate.innerHTML);
+    questionsContainer.appendChild(newQuestionNode);
     renderQuestions(); // call every time a question is added
   });
 

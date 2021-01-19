@@ -1,13 +1,42 @@
 import crudder from "./crudder";
 
 const sendSurveyToDB = () => {
-  const surveyTitle = document.querySelector(".create-survey-title").value || "Survey title";
+  let survey = {
+    title: "",
+    public: true,
+    user_mail: "temp@mail.com",
+    code: Math.floor(Math.random() * 1000),
+    questions: [],
+  };
 
+  survey.title = document.querySelector(".create-survey-title").value || "Survey title";
   // survey public or not
-  const surveyPublic = document.getElementById("public-survey").value == "true";
+  survey.public = document.getElementById("public-survey").value == "true";
 
+  let questionCode = 0;
   const questions = document.querySelectorAll(".survey-question");
-  console.log(questions);
+  questions.forEach((q) => {
+    const question = {
+      question: "",
+      answers: [],
+      code: questionCode,
+      question_type: "",
+    };
+
+    question.question = q.querySelector(".question-text").value;
+    question.question_type = q.querySelector(".question-type").value;
+
+    questionCode++;
+
+    if (question.question_type === "radio") {
+      const answers = q.querySelectorAll(".question-answer");
+      answers.forEach((a) => {
+        question.answers.push(a.value);
+      });
+    }
+    survey.questions.push(question);
+  });
+  console.log(survey);
 };
 
 export default sendSurveyToDB;
