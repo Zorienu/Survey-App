@@ -1,7 +1,5 @@
 import crudder from "./crudder";
 
-const editSurvey = (s) => {
-  alert("edit survey");
-};
+const editSurvey = (s) => {};
 
 export default editSurvey;

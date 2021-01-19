@@ -2,7 +2,6 @@ import crudder from "./crudder.js";
 import stringToHTML from "./stringToHTML.js";
 import showSurveyResponses from "./showSurveyResponses";
 import editSurvey from "./editSurvey";
-import deleteSurvey from "./deleteSurvey";
 
 const Surveys = crudder("api/surveys");
 

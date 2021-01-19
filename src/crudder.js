@@ -15,7 +15,7 @@ const crudder = (resource) => {
 
   const update = (x, token = null) => {
     return fetch(url, {
-      method: "UPDATE",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
         authorization: token,

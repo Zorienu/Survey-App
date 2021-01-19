@@ -32,6 +32,7 @@
 
 .nav-bar__logout-btn:hover {
 	cursor: pointer;
-	color: #fff;
+	color: #9764c7;
 	border-color: #fff;
+	background-color: #fff;
 }

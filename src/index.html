@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Survey App</title>
 	<!-- font awesome cdn -->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -26,39 +27,78 @@
 	<!--<link rel="stylesheet" href="css/surveys-cards.css">-->
 </head>
 <body>
-	<div class="app">
+	<div class="app" id="app-container"></div>
+
+	<template id="create-survey">
 		<nav class="nav-bar">
 			<div class="nav-bar__title">Survey App</div>
 			<div class="nav-bar__logged-message">You're logged as Jasyd</div>
-			<div class="nav-bar__logout-btn">Logout</div>
+			<a class="nav-bar__logout-btn">Logout</a>
+		</nav>
+
+		<!-- añadir formulario de creacion de entrevista -->
+		<form id="create-survey-form" class="create-survey-form">
+			<div class="survey-title-container">
+				<input id="survey-title" class="survey-title" type="text" placeholder="Survey Title">
+				<select id="public-survey" class="survey-select">
+					<option value="true">Public</option>
+					<option value="false">Private</option>
+				</select>
+			</div>
+
+			<div class="survey-question">
+				<div class="question">
+					<input id="question-text" class="question-text" type="text" placeholder="Untitled question">
+					<select id="question-type" class="question-type-select">
+						<option value="radio">Multiple choice</option>
+						<option value="text" selected>Text</option>
+					</select>
+				</div>
+
+				<div class="answers-container">
+					<div>
+						<input class="question-answer" type="text" placeholder="Answer text" disabled>
+					</div>
+				</div>
+
+				<template id="multiple-choice-template">
+					<div class="answers">
+						<div>
+							<input type="radio" disabled>
+							<input class="question-answer" type="text" placeholder="Option">
+							<a id="del-answer" class="del-answer"><i class="fas fa-eraser"></i></a>
+						</div>
+					</div>
+
+					<div class="add-answer-container">
+						<input type="radio" disabled>
+						<a class="add-option">Add option</a>
+					</div>
+				</template>
+
+				<template id="text-template">
+					<div>
+						<input class="question-answer" type="text" placeholder="Answer text" disabled>
+					</div>
+				</template>
+			</div>
+		</form>
+	</template>
+
+	<template id="survey-control-panel">
+		<nav class="nav-bar">
+			<div class="nav-bar__title">Survey App</div>
+			<div class="nav-bar__logged-message">You're logged as Jasyd</div>
+			<a class="nav-bar__logout-btn">Logout</a>
 		</nav>
 
 		<div class="survey-cards-container" id="surveys-container">
-			<div class="survey-card add-survey-card">
+			<div class="survey-card add-survey-card" id="add-survey-btn">
 				<a class="add-survey-btn">
 					<i class="fas fa-plus-circle"></i>
 				</a>
 			</div>
-			<div class="survey-card">
-				<div class="survey-title">Survey title</div>
-				<div class="survey-creator">Created by Jasyd Caballero</div>
-				<div class="survey-questions-quantity">Questions: 20</div>
-				<div class="survey-btns">
-					<a class="responses-btn">Responses</a>
-					<a class="modify-btn"><i class="fas fa-pencil-alt"></i></a>
-					<a class="delete-btn"><i class="far fa-trash-alt"></i></a>
-				</div>
-			</div>
-			<div class="survey-card">
-				<div class="survey-title">Survey title</div>
-				<div class="survey-creator">Created by Jasyd Caballero</div>
-				<div class="survey-questions-quantity">Questions: 20</div>
-				<div class="survey-btns">
-					<a class="responses-btn">Responses</a>
-					<a class="modify-btn"><i class="fas fa-pencil-alt"></i></a>
-					<a class="delete-btn"><i class="far fa-trash-alt"></i></a>
-				</div>
-			</div>
+
 			<div class="survey-card">
 				<div class="survey-title">Survey title</div>
 				<div class="survey-creator">Created by Jasyd Caballero</div>
@@ -80,6 +120,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	
+	</template>
 </body>
 </html>
