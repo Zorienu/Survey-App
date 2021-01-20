@@ -11,17 +11,15 @@ import renderCreateSurvey from "./renderCreateSurvey";
 import renderClient from "./renderClient";
 import renderLogin from "./renderLogin";
 
-//const renderLogin = () => {
-//renderClient();
-//};
-
 const renderApp = () => {
-  renderSurveyControlPanel();
+  const token = localStorage.getItem("token");
+  if (token) return renderSurveyControlPanel();
+  renderClient();
 };
 
 window.onload = () => {
-  //renderApp();
-  renderClient();
+  renderApp();
+  //renderClient();
   //renderLogin();
   //renderCreateSurvey();
 };

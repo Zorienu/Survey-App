@@ -23,9 +23,8 @@ const renderLogin = () => {
 
       userInfo.get(res.token).then((user) => {
         localStorage.setItem("user", JSON.stringify(user));
+        renderSurveyControlPanel();
       });
-
-      renderSurveyControlPanel();
     });
   });
 

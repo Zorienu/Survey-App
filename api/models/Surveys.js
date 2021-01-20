@@ -4,13 +4,14 @@ const Schema = mongoose.Schema;
 const Survey = new Schema({
   title: { type: String, default: "Survey title" },
   user_email: String,
+  user_name: String,
   code: Number,
   questions: [
     {
       code: Number,
       question: String,
       answers: Array,
-      question_type: String, // 'checkbox', 'radio' or 'text'
+      question_type: String, // radio' or 'text'
     },
   ],
   creation_date: { type: Date, default: Date.now },

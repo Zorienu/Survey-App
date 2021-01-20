@@ -16,6 +16,7 @@ const renderSurveyControlPanel = () => {
   const logoutBtn = document.getElementById("nav-bar-logout-btn");
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     renderClient();
   });
 

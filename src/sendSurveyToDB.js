@@ -7,6 +7,7 @@ const sendSurveyToDB = () => {
     title: "",
     public: true,
     user_email: user.email,
+    user_name: user.name,
     code: Math.floor(Math.random() * 1000),
     questions: [],
   };
