@@ -29,6 +29,64 @@
 <body>
 	<div class="app" id="app-container"></div>
 
+	<!-- RESPOND SURVEY TEMPLATE -->
+	<template id="respond-survey">
+		<nav class="nav-bar">
+			<div class="nav-bar__title">Survey App</div>
+		</nav>
+
+		<div class="create-survey-form" id="survey-container">
+			<div class="survey-title-container">
+				<div id="survey-title"></div>
+			</div>
+
+			<div id="user-data" class="user-data survey-title-container">
+				<div class="survey-title">Your information</div>
+					<input id="user-name" class="input-user-data" type="text" placeholder="Name">
+					<input id="user-email" class="input-user-data" type="text" placeholder="Email">
+			</div>
+		</div>
+
+
+		<div class="create-survey-form">
+			<div class="send-survey-btns">
+				<a id="submit-response">Submit response</a>
+				<a id="cancel-response">Cancel</a>
+			</div>
+		</div>
+	</template>
+
+	<!-- SURVEYS CLIENT -->
+	<template id="surveys-client">
+		<nav class="nav-bar">
+			<div class="nav-bar__title">Survey App</div>
+			<div class="nav-bar__client-btns">
+				<div id="register-btn" class="register-btn">
+					<i class="fas fa-user-plus"></i>
+					Sign up
+				</div>
+				<div id="login-btn" class="login-btn">
+					<i class="fas fa-sign-in-alt"></i>
+					Login
+				</div>
+			</div>
+		</nav>
+
+		<div class="survey-cards-container" id="surveys-container"></div>
+	</template>
+
+	<!-- LOGIN -->
+	<template id="login-template">
+		<form id="login-form" class="login-form">
+			<label class="login-label" for="login-user-email"><i class="fas fa-user"></i></label>
+			<input id="login-user-email" class="login-input" type="text">
+			<label class="login-label" for="login-user-password"><i class="fas fa-key"></i></label>
+			<input id="login-user-password" class="login-input" type="password">
+			<input id="login-submit" type="submit" value="Login">
+		</form>
+	</template>
+
+	<!-- CREATE SURVEY -->
 	<template id="create-survey">
 		<nav class="nav-bar">
 			<div class="nav-bar__title">Survey App</div>
@@ -36,7 +94,6 @@
 			<a class="nav-bar__logout-btn">Logout</a>
 		</nav>
 
-		<!-- añadir formulario de creacion de entrevista -->
 		<form id="create-survey-form" class="create-survey-form">
 			<div id="questions-container">
 				<div class="survey-title-container">
@@ -74,6 +131,7 @@
 				<a id="cancel-survey">Cancel</a>
 			</div>
 
+			<!-- SURVEY QUESTIONS CREATION -->
 			<template id="survey-question-template">
 				<div class="survey-question">
 					<div class="question">
@@ -118,6 +176,7 @@
 		</form>
 	</template>
 
+	<!-- SURVEY CONTROL PANEL -->
 	<template id="survey-control-panel">
 		<nav class="nav-bar">
 			<div class="nav-bar__title">Survey App</div>
@@ -130,27 +189,6 @@
 				<a class="add-survey-btn">
 					<i class="fas fa-plus-circle"></i>
 				</a>
-			</div>
-
-			<div class="survey-card">
-				<div class="survey-title">Survey title</div>
-				<div class="survey-creator">Created by Jasyd Caballero</div>
-				<div class="survey-questions-quantity">Questions: 20</div>
-				<div class="survey-btns">
-					<a class="responses-btn">Responses</a>
-					<a class="modify-btn"><i class="fas fa-pencil-alt"></i></a>
-					<a class="delete-btn"><i class="far fa-trash-alt"></i></a>
-				</div>
-			</div>
-			<div class="survey-card">
-				<div class="survey-title">Survey title</div>
-				<div class="survey-creator">Created by Jasyd Caballero</div>
-				<div class="survey-questions-quantity">Questions: 20</div>
-				<div class="survey-btns">
-					<a class="responses-btn">Responses</a>
-					<a class="modify-btn"><i class="fas fa-pencil-alt"></i></a>
-					<a class="delete-btn"><i class="far fa-trash-alt"></i></a>
-				</div>
 			</div>
 		</div>
 	

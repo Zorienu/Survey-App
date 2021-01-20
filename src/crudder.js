@@ -36,7 +36,6 @@ const crudder = (resource) => {
         authorization: token,
       },
     }).then(() => console.log("the survey has been deleted"));
-    //.then(console.log);
   };
 
   return { create, update, get, getById, del };

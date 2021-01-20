@@ -1,0 +1,47 @@
+.nav-bar__client-btns {
+	display: flex;
+	align-items: center;
+}
+
+.register-btn {
+	margin-right: 10px;
+	color: #eee;
+	border: 1px solid #eee;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
+
+.register-btn:hover {
+	color: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.login-btn {
+	border: 1px solid #eee;
+	color: #eee;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
+
+.login-btn:hover {
+	color: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+/*.login-form {*/
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*align-items: center;*/
+/*}*/
+
+/*.login-label {*/
+	/*background-color: #eee;*/
+	/*color: #555;*/
+	/*padding: 3px;*/
+/*}*/
+
+/*.login-input {*/
+	/*margin-right: 5px;*/
+	/*padding: 3px;*/
+/*}*/

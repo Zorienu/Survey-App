@@ -36,7 +36,7 @@ const sendSurveyToDB = () => {
     }
     survey.questions.push(question);
   });
-  console.log(survey);
+  // send survey to DB
   const Survey = crudder("api/surveys");
   Survey.create(survey).then(console.log);
 };
