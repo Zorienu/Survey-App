@@ -24,7 +24,16 @@ const crudder = (resource) => {
     }).then((res) => res.json());
   };
 
-  const get = () => fetch(url).then((res) => res.json());
+  //const get = () => fetch(url).then((res) => res.json());
+  const get = (token = null) => {
+    return fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: token,
+      },
+    }).then((res) => res.json());
+  };
 
   const getById = (id) => fetch(`${url}/${id}`).then((res) => res.json());
 

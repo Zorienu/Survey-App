@@ -4,6 +4,7 @@ import "./css/surveys-cards.css";
 import "./css/create-survey.css";
 import "./css/survey-client.css";
 import "./css/resolve-survey.css";
+import "./css/login-styles.css";
 
 import renderSurveyControlPanel from "./renderSurveyControlPanel";
 import renderCreateSurvey from "./renderCreateSurvey";
@@ -20,7 +21,7 @@ const renderApp = () => {
 
 window.onload = () => {
   //renderApp();
-  //renderClient();
-  renderLogin();
+  renderClient();
+  //renderLogin();
   //renderCreateSurvey();
 };

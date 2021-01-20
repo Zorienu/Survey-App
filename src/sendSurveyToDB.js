@@ -1,10 +1,12 @@
 import crudder from "./crudder";
+import renderSurveyControlPanel from "./renderSurveyControlPanel";
 
 const sendSurveyToDB = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
   let survey = {
     title: "",
     public: true,
-    user_email: "temp@mail.com",
+    user_email: user.email,
     code: Math.floor(Math.random() * 1000),
     questions: [],
   };
@@ -39,6 +41,9 @@ const sendSurveyToDB = () => {
   // send survey to DB
   const Survey = crudder("api/surveys");
   Survey.create(survey).then(console.log);
+
+  // return to survey control panel
+  renderSurveyControlPanel();
 };
 
 export default sendSurveyToDB;

@@ -9,6 +9,7 @@
 	border: 1px solid #eee;
 	padding: 5px 10px;
 	border-radius: 8px;
+	font-weight: 700;
 }
 
 .register-btn:hover {
@@ -22,6 +23,7 @@
 	color: #eee;
 	padding: 5px 10px;
 	border-radius: 8px;
+	font-weight: 700;
 }
 
 .login-btn:hover {

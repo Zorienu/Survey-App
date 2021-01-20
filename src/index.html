@@ -77,12 +77,49 @@
 
 	<!-- LOGIN -->
 	<template id="login-template">
+		<nav class="nav-bar">
+			<div class="nav-bar__title" id="logo">Survey App</div>
+		</nav>
+
 		<form id="login-form" class="login-form">
-			<label class="login-label" for="login-user-email"><i class="fas fa-user"></i></label>
-			<input id="login-user-email" class="login-input" type="text">
-			<label class="login-label" for="login-user-password"><i class="fas fa-key"></i></label>
-			<input id="login-user-password" class="login-input" type="password">
-			<input id="login-submit" type="submit" value="Login">
+			<div class="login__title">Survey App</div>
+			<div class="login__div">
+				<label class="login__label" for="login-user-email"><i class="fas fa-user"></i></label>
+				<input id="login-user-email" class="login__input" type="text" placeholder="Email">
+			</div>
+			<div class="login__div">
+				<label class="login__label" for="login-user-password"><i class="fas fa-key"></i></label>
+				<input id="login-user-password" class="login__input" type="password" placeholder="Password">
+			</div>
+			<input id="login-submit" class="login__btn" type="button" value="Login">
+			<input id="login-register-btn" class="login__register-btn" type="button" value="Sign up">
+		</form>
+	</template>
+
+	<template id="register-template">
+		<nav class="nav-bar">
+			<div class="nav-bar__title" id="logo">Survey App</div>
+		</nav>
+
+		<form id="register-form" class="login-form">
+			<div class="login__title">Survey App</div>
+			<div class="login__div">
+				<label class="login__label" for="login-user-name"><i class="fas fa-file-signature"></i></label>
+				<input id="register-user-name" class="login__input" type="text" placeholder="Name">
+			</div>
+			<div class="login__div">
+				<label class="login__label" for="login-user-email"><i class="fas fa-user"></i></label>
+				<input id="register-user-email" class="login__input" type="text" placeholder="Email">
+			</div>
+			<div class="login__div">
+				<label class="login__label" for="login-user-password"><i class="fas fa-key"></i></label>
+				<input id="register-user-password" class="login__input" type="password" placeholder="Password">
+			</div>
+			<div class="login__div">
+				<label class="login__label" for="login-user-password"><i class="fas fa-key"></i></label>
+				<input id="register-user-r-password" class="login__input" type="password" placeholder="Repeat password">
+			</div>
+			<input id="register-btn" class="login__btn" type="button" value="Sign up">
 		</form>
 	</template>
 
@@ -90,7 +127,7 @@
 	<template id="create-survey">
 		<nav class="nav-bar">
 			<div class="nav-bar__title">Survey App</div>
-			<div class="nav-bar__logged-message">You're logged as Jasyd</div>
+			<div class="nav-bar__logged-message" id="nav-bar-logged-message">You're logged as Jasyd</div>
 			<a class="nav-bar__logout-btn">Logout</a>
 		</nav>
 
@@ -180,8 +217,8 @@
 	<template id="survey-control-panel">
 		<nav class="nav-bar">
 			<div class="nav-bar__title">Survey App</div>
-			<div class="nav-bar__logged-message">You're logged as Jasyd</div>
-			<a class="nav-bar__logout-btn">Logout</a>
+			<div class="nav-bar__logged-message" id="nav-bar-logged-message"></div>
+			<a class="nav-bar__logout-btn" id="nav-bar-logout-btn">Logout</a>
 		</nav>
 
 		<div class="survey-cards-container" id="surveys-container">
