@@ -20,5 +20,6 @@ app.use("/api/surveys", surveys);
 app.use("/api/answers", answers);
 app.use("/api/auth", auth);
 
-port = process.env.port || 3000;
-app.listen(port, () => console.log(`listening on port ${port}`));
+//port = process.env.port || 3000;
+//app.listen(port, () => console.log(`listening on port ${port}`));
+module.exports = app;
