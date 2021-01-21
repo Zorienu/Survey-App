@@ -28,6 +28,16 @@ const renderLogin = () => {
     });
   });
 
+  // adding event to 'Enter' key
+  const pass = document.getElementById("login-user-password");
+  pass.addEventListener("keyup", (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      // click 'login' when 'Enter' key is released
+      document.getElementById("login-submit").click();
+    }
+  });
+
   // add event register button
   const registerBtn = document.getElementById("login-register-btn");
   registerBtn.addEventListener("click", renderRegister);

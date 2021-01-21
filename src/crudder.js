@@ -14,15 +14,15 @@ const crudder = (resource) => {
     }).then((res) => res.json());
   };
 
-  const update = (x, token = null) => {
-    return fetch(url, {
+  const update = (id, x, token = null) => {
+    return fetch(`${url}/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
         authorization: token,
       },
       body: JSON.stringify(x),
-    }).then((res) => res.json());
+    });
   };
 
   //const get = () => fetch(url).then((res) => res.json());

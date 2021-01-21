@@ -2,6 +2,7 @@ import crudder from "./crudder.js";
 import stringToHTML from "./stringToHTML.js";
 import showSurveyResponses from "./showSurveyResponses";
 import editSurvey from "./editSurvey";
+// render available surveys to control panel
 
 const Surveys = crudder("api/surveys");
 let user;

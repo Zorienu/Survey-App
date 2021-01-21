@@ -1,50 +1,11 @@
-import renderQuestionType from "./renderQuestionType";
-import renderSurveyControlPanel from "./renderSurveyControlPanel";
-import sendSurveyToDB from "./sendSurveyToDB";
-import stringToHTML from "./stringToHTML";
-
-// add events to each question
-const renderQuestions = () => {
-  const surveyQuestions = document.querySelectorAll(".survey-question");
-
-  surveyQuestions.forEach((q) => {
-    const questionType = q.querySelector(".question-type");
-    questionType.addEventListener("change", () => {
-      renderQuestionType(questionType.value, q);
-    });
-
-    // add event to delete question
-    const questionDeleteBtn = q.querySelector(".delete-question");
-    questionDeleteBtn.addEventListener("click", () => q.remove());
-  });
-};
-
-// add events 'add question', 'send survey' & 'cancel'
-const addEventsSurveyBtns = () => {
-  // add question button
-  const addQuestionBtn = document.getElementById("add-question-btn");
-
-  addQuestionBtn.addEventListener("click", () => {
-    const questionsContainer = document.getElementById("questions-container");
-    const questionTemplate = document.getElementById("survey-question-template");
-    // innerHTML is string, convert to element preventing rebuild the entire DOM
-    const newQuestionNode = stringToHTML(questionTemplate.innerHTML);
-    questionsContainer.appendChild(newQuestionNode);
-    renderQuestions(); // call every time a question is added
-  });
-
-  // send survey button
-  const sendSurveyBtn = document.getElementById("send-survey");
-  sendSurveyBtn.addEventListener("click", sendSurveyToDB);
-
-  // cancel button
-  const cancelBtn = document.getElementById("cancel-survey");
-  cancelBtn.addEventListener("click", renderSurveyControlPanel);
-};
+import addQuestionToSurvey from "./addQuestionToSurvey";
+import addEventsCreateSurveyBtns from "./addEventsCreateSurveyBtns";
+import renderQuestions from "./renderQuestions";
 
 const renderCreateSurvey = () => {
   document.getElementById("app-container").innerHTML = document.getElementById("create-survey").innerHTML;
-  addEventsSurveyBtns();
+  addEventsCreateSurveyBtns(); // add events 'Add Question', 'Send survey', 'Cancel'
+  addQuestionToSurvey(); // add one question by default
   renderQuestions();
 };
 

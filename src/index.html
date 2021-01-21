@@ -58,6 +58,9 @@
 
 	<!-- SURVEYS CLIENT -->
 	<template id="surveys-client">
+		
+		<div id="div-de-prueba"></div>
+
 		<nav class="nav-bar">
 			<div class="nav-bar__title">Survey App</div>
 			<div class="nav-bar__client-btns">
@@ -96,6 +99,7 @@
 		</form>
 	</template>
 
+	<!-- REGISTER -->
 	<template id="register-template">
 		<nav class="nav-bar">
 			<div class="nav-bar__title" id="logo">Survey App</div>
@@ -123,7 +127,7 @@
 		</form>
 	</template>
 
-	<!-- CREATE SURVEY -->
+<!-- CREATE SURVEY -->
 	<template id="create-survey">
 		<nav class="nav-bar">
 			<div class="nav-bar__title">Survey App</div>
@@ -140,26 +144,7 @@
 						<option value="false">Private</option>
 					</select>
 				</div>
-
-				<div class="survey-question">
-					<div class="question">
-						<input id="question-text" class="question-text" type="text" placeholder="Untitled question">
-						<select class="question-type question-type-select">
-							<option value="radio">Multiple choice</option>
-							<option value="text" selected>Text</option>
-						</select>
-					</div>
-
-					<div class="answers-container">
-						<div>
-							<input class="question-answer" type="text" placeholder="Answer text" disabled>
-						</div>
-					</div>
-
-					<div class="div-delete-question">
-						<a class="delete-question"><i class="far fa-trash-alt"></i></a>
-					</div>
-				</div>
+				<!-- The new questions are added here -->
 			</div>
 
 			<div class="survey-buttons">
@@ -172,7 +157,8 @@
 			<template id="survey-question-template">
 				<div class="survey-question">
 					<div class="question">
-						<input id="question-text" class="question-text" type="text" placeholder="Untitled question">
+<!--id="question-text"-->
+						<input  class="question-text" type="text" placeholder="Untitled question">
 						<select class="question-type question-type-select">
 							<option value="radio">Multiple choice</option>
 							<option value="text" selected>Text</option>
