@@ -29,6 +29,35 @@
 <body>
 	<div class="app" id="app-container"></div>
 
+	<!-- SURVEY RESPONSES TEMPLATE -->
+	<template id="survey-responses">
+		<nav class="nav-bar">
+			<div class="nav-bar__title">Survey App</div>
+		</nav>
+
+		<div class="create-survey-form" id="survey-container">
+			<div class="survey-title-container">
+				<div id="survey-title"></div>
+			</div>
+
+			<div id="user-data" class="user-data survey-title-container">
+				<div class="survey-title">Individual responses</div>
+				<select id="user-select" name="">
+					<option value="user 1">user 1</option>
+					<option value="user 2" selected>user 2</option>
+				</select>
+			</div>
+		</div>
+
+
+		<!--<div class="create-survey-form">-->
+			<!--<div class="send-survey-btns">-->
+				<!--<a id="submit-response">Submit response</a>-->
+				<!--<a id="cancel-response">Cancel</a>-->
+			<!--</div>-->
+		<!--</div>-->
+	</template>
+
 	<!-- RESPOND SURVEY TEMPLATE -->
 	<template id="respond-survey">
 		<nav class="nav-bar">
