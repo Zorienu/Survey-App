@@ -1,6 +1,7 @@
 import stringToHTML from "./stringToHTML";
 import renderClient from "./renderClient";
 import sendAnswerToDB from "./sendAnswerToDB";
+import showSurveyStatistics from "./showSurveyStatistics";
 // render client's answer submiting form
 
 const addEventsSubmitResponse = (survey) => {

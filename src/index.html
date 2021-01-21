@@ -25,6 +25,8 @@
 	<!--<link rel="stylesheet" href="css/navbar.css">-->
 	<!-- custom survey cards css -->
 	<!--<link rel="stylesheet" href="css/surveys-cards.css">-->
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
 	<div class="app" id="app-container"></div>
@@ -40,12 +42,15 @@
 				<div id="survey-title"></div>
 			</div>
 
-			<div id="user-data" class="user-data survey-title-container">
-				<div class="survey-title">Individual responses</div>
-				<select id="user-select" name="">
-					<option value="user 1">user 1</option>
-					<option value="user 2" selected>user 2</option>
-				</select>
+			<div id="user-data" class="survey-title-container flex-responses">
+				<div>
+					<div class="survey-title">Individual responses</div>
+					<select id="user-select" class="survey-select" name="">
+						<option value="user 1">user 1</option>
+						<option value="user 2" selected>user 2</option>
+					</select>
+				</div>
+				<div id="change-mode" class="show-statistics-btn">Show statistics</div>
 			</div>
 		</div>
 
@@ -56,6 +61,28 @@
 				<!--<a id="cancel-response">Cancel</a>-->
 			<!--</div>-->
 		<!--</div>-->
+	</template>
+
+	<!-- SURVEY RESPONSES TEMPLATE -->
+	<template id="survey-statistics">
+		<nav class="nav-bar">
+			<div class="nav-bar__title">Survey App</div>
+		</nav>
+
+		<div class="create-survey-form" id="survey-container">
+			<div class="survey-title-container">
+				<div id="survey-title"></div>
+			</div>
+
+			<div id="user-data" class="survey-title-container flex-responses">
+				<div class="survey-title">Statistics</div>
+				<!--<select id="user-select" class="survey-select" name="">-->
+					<!--<option value="user 1">user 1</option>-->
+					<!--<option value="user 2" selected>user 2</option>-->
+				<!--</select>-->
+				<div id="change-mode" class="show-statistics-btn">Show individual responses</div>
+			</div>
+		</div>
 	</template>
 
 	<!-- RESPOND SURVEY TEMPLATE -->

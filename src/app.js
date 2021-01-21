@@ -5,6 +5,7 @@ import "./css/create-survey.css";
 import "./css/survey-client.css";
 import "./css/resolve-survey.css";
 import "./css/login-styles.css";
+import "./css/survey-responses.css";
 
 import renderSurveyControlPanel from "./renderSurveyControlPanel";
 import renderCreateSurvey from "./renderCreateSurvey";

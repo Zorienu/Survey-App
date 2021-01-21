@@ -1,0 +1,22 @@
+.flex-responses {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.show-statistics-btn {
+	padding: 10px 20px;
+	background-color: #9157cc;
+	color: #fff;
+	margin-right: 10px;
+	border-radius: 8px;
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+
+.text-answer {
+	padding: 10px 20px;
+	background-color: #eee;
+	margin-bottom: 10px;
+	border-radius: 8px;
+}
