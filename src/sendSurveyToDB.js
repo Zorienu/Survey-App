@@ -45,7 +45,8 @@ const sendSurveyToDB = (id) => {
   // send survey to DB ( update or create survey )
   // if 'id' is not 'null', then update
   const Survey = crudder("api/surveys");
-  if (id) Survey.update(id, { title: survey.title, questions: survey.questions }, token).then(renderSurveyControlPanel);
+  if (id)
+    Survey.update(id, { title: survey.title, questions: survey.questions, public: survey.public }, token).then(renderSurveyControlPanel);
   else Survey.create(survey).then(renderSurveyControlPanel);
   // return to survey control panel
 };

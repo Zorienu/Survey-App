@@ -1,6 +1,7 @@
 import crudder from "./crudder";
 import stringToHTML from "./stringToHTML";
 import showSurveyStatistics from "./showSurveyStatistics";
+import renderSurveyControlPanel from "./renderSurveyControlPanel";
 
 const Answers = crudder("api/answers");
 
@@ -34,11 +35,11 @@ const removeQuestionChildren = (container) => {
 };
 
 const showSurveyResponses = (s) => {
-  console.log(s);
   const appContainer = document.getElementById("app-container");
 
   Answers.getById(s.code).then((answers) => {
     appContainer.innerHTML = document.getElementById("survey-responses").innerHTML;
+    document.getElementById("logo").addEventListener("click", renderSurveyControlPanel);
     // set survey title
     document.getElementById("survey-title").innerText = s.title;
 

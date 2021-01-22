@@ -2,14 +2,14 @@ import crudder from "./crudder";
 import renderClient from "./renderClient";
 const Answers = crudder("api/answers");
 
-let answer = {
-  user_email: "",
-  user_name: "",
-  survey_code: 0,
-  answers: [],
-};
-
 const submitSurveyResponse = (survey) => {
+  let answer = {
+    user_email: "",
+    user_name: "",
+    survey_code: 0,
+    answers: [],
+  };
+
   answer.user_email = document.getElementById("user-email").value;
   answer.user_name = document.getElementById("user-name").value;
   answer.survey_code = survey.code;

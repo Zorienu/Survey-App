@@ -16,6 +16,12 @@ router.get("/:id", (req, res) => {
     .then((x) => res.status(200).send(x));
 });
 
+router.get("/:public", (req, res) => {
+  Surveys.find({ public: req.params.public })
+    .exec()
+    .then((x) => res.status(200).send(x));
+});
+
 router.post("/", (req, res) => {
   Surveys.create(req.body).then((x) => res.status(201).send(x));
 });

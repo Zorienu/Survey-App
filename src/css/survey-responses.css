@@ -20,3 +20,19 @@
 	margin-bottom: 10px;
 	border-radius: 8px;
 }
+
+@media only screen and (max-width: 800px) {
+	.flex-responses {
+		flex-direction: column;
+	}
+	
+	.flex-responses div {
+		display: flex;
+		flex-direction: column;
+	} 
+
+	.show-statistics-btn {
+		margin-top: 10px;
+	}
+}
+

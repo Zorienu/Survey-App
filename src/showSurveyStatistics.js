@@ -1,5 +1,6 @@
 import showSurveyResponses from "./showSurveyResponses";
 import stringToHTML from "./stringToHTML";
+import renderSurveyControlPanel from "./renderSurveyControlPanel";
 
 const drawPiechart = (answers, questionCode) => {
   google.charts.load("current", { packages: ["corechart"] });
@@ -13,10 +14,11 @@ const drawPiechart = (answers, questionCode) => {
     data.addRows(answers);
 
     // Optional; add a title and set the width and height of the chart
-    let options = { title: "", width: 550, height: 200 };
+    const chartContainer = document.getElementById(`answers-${questionCode}`);
+    let options = { title: "", width: chartContainer.offsetWidth, height: 200 };
 
     // Display the chart inside the <div> element with id="piechart"
-    let chart = new google.visualization.PieChart(document.getElementById(`answers-${questionCode}`));
+    let chart = new google.visualization.PieChart(chartContainer);
     chart.draw(data, options);
   }
 };
@@ -42,7 +44,7 @@ const showSurveyStatistics = (s, users) => {
   const appContainer = document.getElementById("app-container");
   const statisticsTemplate = document.getElementById("survey-statistics");
   appContainer.innerHTML = statisticsTemplate.innerHTML;
-
+  document.getElementById("logo").addEventListener("click", renderSurveyControlPanel);
   // set title
   document.getElementById("survey-title").innerText = s.title;
 
